@@ -1,0 +1,337 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header .header{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    align-items: center;
+    background-color: rgb(124, 33, 72);
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+}
+#header .header img{
+    height: 100px;
+}
+#header .nav-bar{
+    text-align: center;
+    position: relative;
+}
+.navbar-nav{
+    display: flex;
+}
+.navbar-nav li{
+    list-style: none;
+} 
+#header .nav-bar a{
+    text-decoration: none;
+    margin-left: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(227, 191, 158);
+    position: relative;
+}
+#header .nav-bar a::before{
+    content: '';
+    height: 3px;
+    background-color: rgb(227, 191, 158);
+    width: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    transition: all 400ms;
+    border-radius: 24px;
+}
+#header .nav-bar a:hover::before{
+    width: 100%;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  50px;
+}
+.detail{
+    margin-left: 10%;
+}
+.detail h1,h4{
+   margin: 0;
+}
+.detail h1{
+    font-size: 70px;
+}
+.detail h4{
+    font-size: 30px;
+}
+.details img{
+    height: 600px;
+    width: 500px;
+    border-radius: 24px;
+}
+.detail button{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.background-img img{
+     background: url(/images/pexels-photo-14.webp);
+     background-repeat: no-repeat; 
+     width: 100vw;
+     height: 600px;
+     filter: blur(2px);
+     filter: brightness(20%);
+}
+.bg-detail{
+    position: relative;
+    margin-left: 10%;
+}
+.bg-img img{
+    position: absolute;
+    height: 400px;
+    width: 250px;
+    border-radius: 12px;
+    top: -29rem;
+    left: 50px;
+}
+.bg-header h1{
+    font-size: 50px;
+    margin: 0;
+    font-family: "Abril Fatface", serif;
+    color: white;
+    position: absolute;
+    top: -30rem;
+    left: 28%;
+    font-weight: 300;
+}
+.img-gallery{
+   position: relative;
+
+}
+.img-gallery img{
+    width: 100px;
+    border-radius: 12px;
+}
+.img-gallery img:nth-child(1){
+    position: absolute;
+    top: -29rem;
+    right: 18rem;
+}
+.img-gallery img:nth-child(2){
+    height: 320px;
+    width: 200px;
+    position: absolute;
+    top: -29rem;
+    right: 80px;
+}
+.img-gallery img:nth-child(3){
+    position: absolute;
+    top: -19rem;
+    right: 18rem;
+}
+.bg-about{
+    position: absolute;
+    top: -12rem;
+    color:  rgb(191, 160, 114);
+    right: 35%;
+}
+.bg-about h1{
+    font-family: "Abril Fatface", serif;
+    font-weight: 500;
+    font-size: 70px;
+    margin: 0;
+}
+.bg-about h2{
+    font-family: "Fredericka the Great", serif;
+    color:  rgb(191, 160, 114);
+    font-weight: 100;
+    font-size: 60px;
+    margin: 0;
+    margin-left: 30%;
+}
+.bg-header h1 button{
+    padding: 5px;
+    width: 150px;
+    font-size: 20px;
+    border: 1px solid rgb(191, 160, 114);
+    border-radius: 12px;
+    color: white;
+    background: transparent;
+    font-family:"Abril Fatface", serif ;
+    font-weight: 400;
+}
+#about-container{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+#about-container .about-img img{
+    height: 500px;
+    width: 500px;
+    border-radius: 24px;
+}
+.about-content h1{
+    font-size: 50px;
+    margin: 50px;
+    margin-left: 0;
+    position: relative;
+}
+#about-container .about-content p{
+    width: 500px;
+    font-size: 22px;
+}
+.btn{
+    padding: 10px;
+    font-size: 18px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    margin: 30px;
+    margin-left: 0;
+}
+#portfolio{
+    margin: 50px;
+}
+.portfolio-header h1{
+    font-size: 50px;
+    margin: 50px auto;
+    text-align: center;
+}
+.portfolio-img{
+   display: grid;
+   grid-template-columns: repeat(3, 250px);
+   grid-template-rows: repeat(4, 250px);
+   gap: 20px;
+   justify-content: center;
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   padding: 50px;
+   border-radius: 50px;
+}
+.portfolio-img img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+        transition: all 300ms;
+}
+.portfolio-img img:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.portfolio-img img:nth-child(1){
+    grid-row:1/2 ;
+    grid-column:1/2 ;
+}
+.portfolio-img img:nth-child(2){
+    grid-row: 1/3;
+    grid-column: 2/3;
+}
+.portfolio-img img:nth-child(3){
+    grid-row: 1/3;
+    grid-column: 3/4;
+}
+.portfolio-img img:nth-child(4){
+    grid-row: 2/4;
+    grid-column: 1/2;
+}
+.portfolio-img img:nth-child(5){
+    grid-row:3/5 ;
+    grid-column: 2/3;
+}
+.portfolio-img img:nth-child(6){
+    grid-row:3/5 ;
+    grid-column: 3/4;
+}
+.about-details h1{
+ text-align: center;
+}
+.about-details{
+    margin: 50px;
+}
+.about-details .content{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    gap: 30px;
+    margin: 50px;
+}
+.about-details .content p{
+    font-size: 20px;
+    font-weight: 200;
+}
+.about-details .content h2{
+    font-size: 25px;
+}
+.content button{
+    width: fit-content;
+    padding: 10PX;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+#footer{
+    background-color: rgb(226, 240, 241);
+}
+#contact{
+    display: flex;
+    margin: 0;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.contact-about h1{
+    margin: 20px;
+    margin-left: 0;
+    font-size: 35px;
+}
+.contact-about p{
+    font-size: 20px;
+}
+.contact-about input{
+    padding: 20px;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 40px;
+    border: 1px solid black;
+}
+.contact-about textarea{
+    padding: 20px;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+.contact-about button{
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.copyright{
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+.container-fluid{
+    background-color: rgb(124, 33, 72);
+    margin: 0;
+}
+.navbar-toggler-icon{
+    background-color: rgb(191, 160, 114) ;
+}
